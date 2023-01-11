@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="家庭监控平台" Height="350" Width="600" Loaded="Window_Loaded_1">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="93*"/>
+            <RowDefinition Height="167*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="17*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="239*"/>
+            <ColumnDefinition Width="361*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="串口:" HorizontalAlignment="Left" Width="46" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" HorizontalContentAlignment="Left" Margin="30,55,0,164" Grid.Column="1" Grid.RowSpan="2" />
+        <ComboBox x:Name="UI_port_com" HorizontalAlignment="Left" Margin="86,57,0,0" VerticalAlignment="Top" Width="92" Height="26" RenderTransformOrigin="2.111,-2.104" Grid.Column="1" DropDownOpened="UI_port_com_DropDownOpened" SelectionChanged="UI_port_com_SelectionChanged"/>
+        <Button Name="UI_port_btn" Content="打开" HorizontalAlignment="Left" Margin="190,56,0,0" VerticalAlignment="Top" Background="#FF326CF3" BorderBrush="#ffffff" Foreground="#ffffff" Height="27" Width="62" Grid.Column="1" Click="UI_port_btn_Click"/>
+        <Border BorderBrush="#ffffff" Background="#FF326CF3" BorderThickness="1" HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="2082" Grid.ColumnSpan="2" Margin="0,-4,0,0"/>
+        <Label Content="家庭监控平台" Foreground="#ffffff" FontSize="20" HorizontalAlignment="Center" Margin="0,3,0,0" VerticalAlignment="Top" Height="37" Width="146" RenderTransformOrigin="-0.292,-2.934"/>
+        <Button x:Name="UI_BTN_MIAN" Content="显示数据" Background="#FF326CF3" BorderBrush="#ffffff" Foreground="#ffffff" Margin="223,18,76,13" Height="27" Width="62" Click="UI_BTN_MIAN_Click" Grid.Column="1" Grid.Row="2"/>
+        <TextBox x:Name="UI_Time" HorizontalAlignment="Center" Margin="0,22,0,0" TextWrapping="Wrap" Text="时间" VerticalAlignment="Top" Width="177" Background="#FF326CF3" BorderBrush="#FF326CF3" Foreground="#ffffff" TextChanged="UI_Time_TextChanged" Height="17" Grid.Column="1"/>
+
+    </Grid>
+</Window>
