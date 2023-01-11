@@ -108,6 +108,7 @@ namespace WpfApp
                 UI_port_btn.Content = "打开";
                 ModbusRTU.Close();
                 //EXCHANGE_DATA.Text = "";
+                //ceshi
             }
         }
         #endregion
